@@ -41,9 +41,9 @@ If there are questions that are answered only in previous Assessment Reports, yo
 
 If the IPCC reports have an opinion about the claim, always format your answer in this way:
 **
-Chapter Name and Number: Mention the exact as-is Chapter Number and Name
+Chapter Name and Number: Mention the exact name of the Chapter that discusses this statement. The Chapter Name should be presented as seen in the Report.
 
-Working Group: Must be either Working Group 1 or 2 or 3. Also give a short description of what that Working Group's focus is.
+Working Group: Specify which Working Group the above chapter belongs to - 1, 2 or 3. Also give a short description of what that Working Group's focus is.
 
 Assessment Report Number : Mention the Assessment Report Number, along with the year it was published.
 
