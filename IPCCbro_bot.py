@@ -2,7 +2,8 @@ import openai
 import streamlit as st
 import os
 
-api_key = os.environ['API_KEY']
+api_key = os.getenv('API_KEY')
+    
 openai.api_key = api_key
 
 context = [ {'role':'system', 'content':"""
