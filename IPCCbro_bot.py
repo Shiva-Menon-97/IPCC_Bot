@@ -66,9 +66,7 @@ def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0)
                 )
     return responses.choices[0].message["content"]
 
-def collect_messages(_):
-    global user_input
-    prompt = user_input
+def collect_messages(prompt)):
     context.append({'role':'user', 'content':f"{prompt}"})
     response = get_completion_from_messages(context) 
     context.append({'role':'assistant', 'content':f"{response}"})
@@ -88,7 +86,7 @@ if 'past' not in st.session_state:
 user_input = st.text_input("You: ","Hello, how are you?", key="input")
 
 if user_input:
-    output = collect_messages()
+    output = collect_messages(user_input)
     # store the output 
     st.session_state.past.append(user_input)
     st.session_state.generated.append(output)
