@@ -90,7 +90,7 @@ def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0)
 
 def collect_messages(prompt):
     context.append({'role':'user', 'content':f"{prompt}"})
-    response = get_completion_from_messages(context, temperature=0.3) 
+    response = get_completion_from_messages(context, temperature=0) 
     context.append({'role':'assistant', 'content':f"{response}"})
     return response
 
