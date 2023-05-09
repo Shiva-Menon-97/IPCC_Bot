@@ -48,7 +48,7 @@ Working Group: Specify which Working Group you are referring to inspect the User
 Section Name: Mention the Name of the section or chapter which you are referring to inspect the User's statement.
 
 Conclusions drawn from these inputs: Based on what you read from the relevant Assessment Report, explain your conclusions about the User's statement. \
-Prioritize IPCC AR6 report. Limit your explanation to 60 words.
+Prioritize IPCC AR6 report. Limit your explanation to 60 words. Additionally, quote a relevant statement from the report verbatim.
 **
 
 **
