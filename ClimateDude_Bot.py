@@ -3,7 +3,7 @@ import streamlit as st
 import os
 from dotenv import load_dotenv
 
-load_dotenv('.env')
+load_dotenv('ipccbro.env')
 api_key = os.environ.get('API_KEY')
 openai.api_key = api_key
 
