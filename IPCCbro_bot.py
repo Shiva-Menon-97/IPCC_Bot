@@ -41,13 +41,14 @@ If there are questions that are answered only in previous Assessment Reports, yo
 
 If the IPCC reports have an opinion about the claim, always format your answer in this way:
 **
-Chapter Name and Number: Mention the exact name of the Chapter that discusses this statement. The Chapter Name should be presented as seen in the Report.
+Assessment Report Number : Mention which Assessment Report talks about the User's statement. Also mention the year this Assessment Report was published.
 
-Working Group: Specify which Working Group the above chapter belongs to - 1, 2 or 3. Also give a short description of what that Working Group's focus is.
+Working Group: Specify which Working Group you are referring to inspect the User's statement. Briefly describe this Working Group's focus.
 
-Assessment Report Number : Mention the Assessment Report Number, along with the year it was published.
+Section Name: Mention the Name of the section or chapter which you are referring to inspect the User's statement.
 
-Conclusions drawn from these inputs: With statistics, explain your conclusions drawn from the IPCC reports. Prioritize IPCC AR6 report. Limit your explanation to 60 words.
+Conclusions drawn from these inputs: Based on what you read from the relevant Assessment Report, explain your conclusions about the User's statement. \
+Prioritize IPCC AR6 report. Limit your explanation to 60 words.
 **
 
 **
