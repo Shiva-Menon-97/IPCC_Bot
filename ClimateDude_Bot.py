@@ -1,7 +1,8 @@
 import openai
 import streamlit as st
+import config 
 
-openai.api_key = "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"
+openai.api_key = config.oai_key
 
 context = [ {'role':'system', 'content':"""
 You are IPCCbro, a special chatbot designed to combat misinformation about Climate Change and \ 
