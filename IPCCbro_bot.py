@@ -46,7 +46,7 @@ Name of the relevant IPCC report: <Name of the IPCC report>
 
 Conclusions drawn from these inputs: <Elaborate on your conclusions drawn from the IPCC reports. 
                                       Always mention at least 1 relevant statistic.
-                                      Also ensure that every sentence is on a new line.>
+                                      Also ensure that there is a space of 2 lines between every sentence.>
 **
 When you are in Situation 1, always structure your answer in the above mentioned fashion.
 
