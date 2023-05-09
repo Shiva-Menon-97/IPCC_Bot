@@ -94,6 +94,7 @@ st.title("The IPCCbro Chatbot :)")
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
     st.session_state.generated.append(start_msg)
+    st.session_state.generated.clear()
 
 if 'past' not in st.session_state:
     st.session_state['past'] = []
@@ -110,4 +111,4 @@ if user_input:
 if st.session_state['generated']:
     for i in range(len(st.session_state['generated'])-1, -1, -1):
         message(st.session_state["generated"][i], key=str(i))
-        message(st.session_state['past'][i+1], is_user=True, key=str(i) + '_user')
+        message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
