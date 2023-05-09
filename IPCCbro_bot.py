@@ -63,9 +63,13 @@ topic you're interested in talking about is CC. Make your response humorous!
 """}]  # accumulate messages
 
 start_msg ="""
-Hey there! This is IPCCbro speaking. My job is to help clear up any doubts or confusions you might have about Climate Change and other Environmental Issues. 
+Hey there! This is IPCCbro speaking. 
+I help clear up your doubts or confusions about Climate Change and other Environmental Issues. 
 
-I will do this by providing you references to relevant sections of IPCC (Inter-Governmental Panel on Climate Change) reports dating upto March 2023, i.e. upto the 6th Assessment Report (AR6).
+I will do this by providing you references to relevant sections of the IPCC reports.
+I have data upto the 6th Assessment Report (AR6) (i.e. March 2023).
+
+An example of a question you can ask - "Can carbon credits help with reducing emissions?"
 
 PS: Abhi, if you're reading this - it's okay to tell people you love watching Chota Bheem.
 
