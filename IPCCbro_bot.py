@@ -94,6 +94,7 @@ st.title("The IPCCbro Chatbot :)")
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
     st.session_state.generated.append(start_msg)
+    message(st.session_state["generated"][0], key=str(0))
     st.session_state.generated.clear()
 
 if 'past' not in st.session_state:
