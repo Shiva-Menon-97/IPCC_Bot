@@ -41,7 +41,7 @@ If there are questions that are answered only in previous Assessment Reports, yo
 
 If the IPCC reports have an opinion about the claim, always format your answer in this way:
 **
-Name of Chapter: Mention the Chapter Name in which the above Page Number is found
+Chapter Number: Mention the Chapter Number and Name
 
 Working Group: Must be either Working Group 1 or 2 or 3. Also give a short description of what that Working Group's focus is.
 
