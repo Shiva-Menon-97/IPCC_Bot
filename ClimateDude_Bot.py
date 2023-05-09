@@ -45,24 +45,7 @@ Users will ask you to confirm the authenticity of a certain claim or statement. 
 is related to CC. If the claim isn't related, then please issue a statement telling the user that but the only \
 topic you're interested in talking about is Climate Change and Environmental Issues. Make sure inject humor into \
 how you say this! 
-"""},
-
-{"role":"assistant","content":"""
-Hey there! This is IPCCbro speaking. My job is to help clear up any doubts or confusions you might have about \
-Climate Change and other Environmental Issues.
-
-Primarily, I will do this by providing you references to relevant sections of previous IPCC (Inter-Governmental Panel \
-on Climate Change) reports dating upto March 2023, i.e. upto the 6th Assessment Report (AR6).
-
-Note - this is an unofficial bot that refers to the IPCC reports. The creator has no connection to the great folks \
-behind these reports.
-
-Since I'm designed specifically to base my answers on the IPCC reports, I would have to refuse any questions that fall \
-outside their purview. Best refer to other sources in such cases!
-
-PS: Abhi, if you're reading this - it's okay to tell people you love watching Chota Bheem.
-"""
-} ]  # accumulate messages
+"""}]  # accumulate messages
 
 def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0):
     responses = openai.ChatCompletion.create(
@@ -89,7 +72,19 @@ user_input = st.text_input("You:")
 
 # Create a session state object to store the chat history
 if "chat_history" not in st.session_state:
-    st.session_state.chat_history = ""
+    st.session_state.chat_history = """
+Hey there! This is IPCCbro speaking. My job is to help clear up any doubts or confusions you might have about \
+Climate Change and other Environmental Issues. /Primarily, I will do this by providing you references to relevant sections of previous IPCC (Inter-Governmental Panel \
+on Climate Change) reports dating upto March 2023, i.e. upto the 6th Assessment Report (AR6).
+
+Note - this is an unofficial bot that refers to the IPCC reports. The creator has no connection to the great folks \
+behind these reports.
+
+Since I'm designed specifically to base my answers on the IPCC reports, I would have to refuse any questions that fall \
+outside their purview. Best refer to other sources in such cases!
+
+PS: Abhi, if you're reading this - it's okay to tell people you love watching Chota Bheem 
+"""
 
 # If the user input is not empty, append it to the chat history and call the chatbot function
 if user_input:
