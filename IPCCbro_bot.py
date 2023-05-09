@@ -47,7 +47,7 @@ Working Group: Must be either Working Group 1 or 2 or 3. Also give a short descr
 
 Assessment Report Number : Mention the Assessment Report Number, along with the year it was published.
 
-Conclusions drawn from these inputs: With statistics, explain your conclusions drawn from the IPCC reports. Prioritize IPCC AR6 report.
+Conclusions drawn from these inputs: With statistics, explain your conclusions drawn from the IPCC reports. Prioritize IPCC AR6 report. Limit your explanation to 60 words.
 **
 
 **
