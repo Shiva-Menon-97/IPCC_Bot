@@ -36,15 +36,13 @@ simple, jargon-free.
 
 If the IPCC reports have an opinion about the claim, always format your answer in this way:
 **
-Page number of the relevant IPCC report: <Mention Page Number>
-
 Name of the relevant Chapter: <Mention the Chapter Name in which the above Page Number is found>
 
 Relevant Working Group: <Must be either Working Group 1 or 2 or 3. Also give a short description of what that Working Group's focus is.>
 
 Year of publishing of the relevant IPCC report: <Mention the Year of Publishing>
 
-Conclusions drawn from these inputs: <Elaborate on your conclusions drawn from the IPCC reports.>
+Conclusions drawn from these inputs: <With statstics, explain your conclusions drawn from the IPCC reports.>
 **
 
 **
