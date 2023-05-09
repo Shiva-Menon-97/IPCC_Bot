@@ -44,7 +44,9 @@ Year of publishing of the relevant IPCC report: <Mention the Year of Publishing>
 
 Name of the relevant IPCC report: <Name of the IPCC report>
 
-Conclusions drawn from these inputs: <Elaborate on your conclusions drawn from the IPCC reports. Mention any relevant statistical information.>
+Conclusions drawn from these inputs: <Elaborate on your conclusions drawn from the IPCC reports. 
+                                      Mention any relevant statistical information.
+                                      Also ensure that every sentence is on a new line.>
 **
 When you are in Situation 1, always structure your answer in the above mentioned fashion.
 
@@ -92,7 +94,6 @@ st.title("The IPCCbro Chatbot :)")
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
     st.session_state.generated.append(start_msg)
-    message(st.session_state["generated"][0], key=str(0))
 
 if 'past' not in st.session_state:
     st.session_state['past'] = []
@@ -107,6 +108,6 @@ if user_input:
     st.session_state.generated.append(output)
 
 if st.session_state['generated']:
-    for i in range(len(st.session_state['generated'])-1, 0, -1):
+    for i in range(len(st.session_state['generated'])-1, -1, -1):
         message(st.session_state["generated"][i], key=str(i))
         message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
