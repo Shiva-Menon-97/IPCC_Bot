@@ -74,7 +74,7 @@ user_input = st.text_input("You:")
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = """Hey there! This is IPCCbro speaking. My job is to help clear up any doubts or confusions you might have about Climate Change and other Environmental Issues. 
 
-Primarily, I will do this by providing you references to relevant sections of previous IPCC (Inter-Governmental Panel on Climate Change) reports dating upto March 2023, i.e. upto the 6th Assessment Report (AR6).
+I will do this by providing you references to relevant sections of IPCC (Inter-Governmental Panel on Climate Change) reports dating upto March 2023, i.e. upto the 6th Assessment Report (AR6).
 
 PS: Abhi, if you're reading this - it's okay to tell people you love watching Chota Bheem 
 
