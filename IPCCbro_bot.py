@@ -73,7 +73,7 @@ An example of a question you can ask - "Can carbon credits help with reducing em
 
 PS: Abhi, if you're reading this - it's okay to tell people you love watching Chota Bheem.
 
-Note - this is an unofficial bot that refers to the IPCC reports. The creator has no connection to the great folks behind these reports.
+Note - this is an unofficial bot. The creator has no connection to the great folks behind the IPCC reports.
 """
 
 
