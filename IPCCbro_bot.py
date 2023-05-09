@@ -1,10 +1,11 @@
 import openai
 import streamlit as st
+from streamlit_chat import message
 
 # The "key" has been stored in the app's settings right before the app's deployment.
 # Streamlit gives me that option - this is available in advanced settings.
 api_key = st.secrets['key']
-    
+
 openai.api_key = api_key
 
 context = [ {'role':'system', 'content':"""
@@ -28,14 +29,20 @@ You first check if the claim is related to CC. If it is related to CC, your next
 reports to see whether they agree or disagree with the claim. If the IPCC reports have an opinion on this claim,\
 you will form your conclusions based on what the reports say, and present these conclusions to the user using \
 language that is understandable to a layman.
+
+If the IPCC reports have an opinion about the claim, always format your answer in this way:
 **
-If the IPCC reports have an opinion about the claim, make doubly sure that you structure your answer in the following format:
-Page number or numbers of the relevant IPCC report: ...
-Section name or names of the relevant IPCC report: ...
-Year of publishing of the relevant IPCC report: ...
-Name of the relevant IPCC report: ...
-Conclusions drawn from these inputs: ...
+Page number or numbers of the relevant IPCC report: <Mention Page Number or Numbers>
+
+Section name or names of the relevant IPCC report: <Mention the Section Name or Names>
+
+Year of publishing of the relevant IPCC report: <Mention the Year of Publishing>
+
+Name of the relevant IPCC report: <Name of the IPCC report>
+
+Conclusions drawn from these inputs: <Elaborate on your conclusions drawn from the IPCC reports.>
 **
+Ensure that when you are in Situation 1, you always structure your answer in the above mentioned fashion.
 
 Situation 2:
 Users will ask you to confirm the authenticity of a certain claim or statement. You first check if the claim \
@@ -62,7 +69,6 @@ def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0)
 def collect_messages(_):
     global user_input
     prompt = user_input
-    user_input = ''
     context.append({'role':'user', 'content':f"{prompt}"})
     response = get_completion_from_messages(context) 
     context.append({'role':'assistant', 'content':f"{response}"})
@@ -71,26 +77,33 @@ def collect_messages(_):
 # Setting the title of my App
 st.title("The IPCCbro Chatbot :)")
 
+# Storing the chat
+if 'generated' not in st.session_state:
+    st.session_state['generated'] = []
+
+if 'past' not in st.session_state:
+    st.session_state['past'] = []
+
 # Create a text input widget for the user input
-user_input = st.text_input("You:")
+user_input = st.text_input("You: ","Hello, how are you?", key="input")
 
-# Create a session state object to store the chat history
-if "chat_history" not in st.session_state:
-    st.session_state.chat_history = """Hey there! This is IPCCbro speaking. My job is to help clear up any doubts or confusions you might have about Climate Change and other Environmental Issues. 
-
-I will do this by providing you references to relevant sections of IPCC (Inter-Governmental Panel on Climate Change) reports dating upto March 2023, i.e. upto the 6th Assessment Report (AR6).
-
-PS: Abhi, if you're reading this - it's okay to tell people you love watching Chota Bheem 
-
-Note - this is an unofficial bot that refers to the IPCC reports. The creator has no connection to the great folks behind these reports.
-"""
-
-# If the user input is not empty, append it to the chat history and call the chatbot function
 if user_input:
-    st.session_state.chat_history += f"You: {user_input}\n"
-    chatbot_output = collect_messages(user_input)
-    st.session_state.chat_history += f"IPCCbro: {chatbot_output}\n"
+    output = collect_messages()
+    # store the output 
+    st.session_state.past.append(user_input)
+    st.session_state.generated.append(output)
 
-# Create a text area widget to display the chat history
-st.text_area("Chat History:", st.session_state.chat_history, height=200)
+# Hey there! This is IPCCbro speaking. My job is to help clear up any doubts or confusions you might have about Climate Change and other Environmental Issues. 
 
+# I will do this by providing you references to relevant sections of IPCC (Inter-Governmental Panel on Climate Change) reports dating upto March 2023, i.e. upto the 6th Assessment Report (AR6).
+
+# PS: Abhi, if you're reading this - it's okay to tell people you love watching Chota Bheem.
+
+# Note - this is an unofficial bot that refers to the IPCC reports. The creator has no connection to the great folks behind these reports.
+# """
+
+if st.session_state['generated']:
+    
+    for i in range(len(st.session_state['generated'])-1, -1, -1):
+        message(st.session_state["generated"][i], key=str(i))
+        message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
