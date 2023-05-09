@@ -45,7 +45,7 @@ Year of publishing of the relevant IPCC report: <Mention the Year of Publishing>
 Name of the relevant IPCC report: <Name of the IPCC report>
 
 Conclusions drawn from these inputs: <Elaborate on your conclusions drawn from the IPCC reports. 
-                                      Mention any relevant statistical information.
+                                      Always mention at least 1 relevant statistic.
                                       Also ensure that every sentence is on a new line.>
 **
 When you are in Situation 1, always structure your answer in the above mentioned fashion.
