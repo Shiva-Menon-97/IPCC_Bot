@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_chat import message
 
 # The "key" has been stored in the app's settings right before the app's deployment.
-# Streamlit gives me that option - this is available in advanced settings.
+# Streamlit gives me that option; this is available in advanced settings.
 api_key = st.secrets['key']
 
 openai.api_key = api_key
