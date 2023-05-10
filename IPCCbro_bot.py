@@ -74,7 +74,7 @@ Hey there! This is IPCCbro speaking. I help clear up your doubts or confusions a
 by providing you references to relevant sections of the IPCC reports.
 
 I have data upto the 6th Assessment Report (AR6), initiated in 2021. Some questions you can ask - 
-"How are plants affected by rising sea levels?"
+"Will rising sea levels lead to habitat loss for fauna?"
 "What is the global average rise in temperature? Refer to AR6."
 
 PS: Abhi, if you're reading this - it's okay to tell people you love watching Chota Bheem, don't be shy.
